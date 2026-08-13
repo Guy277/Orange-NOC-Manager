@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "Orange NOC Manager API",
+    "_postman_id": "4bb7c5de-8c4d-4ae7-a4f9-orange-noc-manager",
+    "description": "Collection de base pour la demonstration du MVP Orange NOC Manager.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000/api"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "List incidents",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/incidents?page=1&limit=10"
+      }
+    },
+    {
+      "name": "Dashboard summary",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/dashboard/summary"
+      }
+    },
+    {
+      "name": "Logs",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/logs?page=1&limit=10"
+      }
+    },
+    {
+      "name": "Export XML",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/exports/incidents.xml"
+      }
+    }
+  ]
+}
